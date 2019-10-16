@@ -8,7 +8,12 @@ class Posts extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://hidden-ocean-16005.herokuapp.com/api/v1/posts/', {
+    const url = 'http://localhost:2000/api/v1/posts';
+  
+    if(process.env.NODE_ENV === 'production'){
+      url = 'https://hidden-ocean-16005.herokuapp.com/api/v1/posts'
+    }
+    fetch(url, {
       method: 'GET',
     }
     ).then(response => response.json())
@@ -19,8 +24,13 @@ class Posts extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     const data = new FormData(event.target);
-    console.log(event);
-    fetch('https://hidden-ocean-16005.herokuapp.com/api/v1/posts/', {
+    const url = 'http://localhost:2000/api/v1/posts';
+  
+    if(process.env.NODE_ENV === 'production'){
+      url = 'https://hidden-ocean-16005.herokuapp.com/api/v1/posts'
+    }
+
+    fetch(url, {
       method: 'DELETE',
       body: data,
     }

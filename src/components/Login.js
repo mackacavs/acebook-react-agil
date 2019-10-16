@@ -27,7 +27,12 @@ class Login extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     const data = new FormData(event.target);
-    fetch('https://hidden-ocean-16005.herokuapp.com/api/v1/users', {
+    const url = 'http://localhost:2000/api/v1/users';
+
+    if(process.env.NODE_ENV === 'production'){
+      url = 'https://hidden-ocean-16005.herokuapp.com/api/v1/users'
+    }
+    fetch(url, {
       method: 'POST',
       body: data,
     })
