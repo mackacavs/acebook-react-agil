@@ -8,7 +8,7 @@ class Posts extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/api/v1/posts/', {
+    fetch('http://https://hidden-ocean-16005.herokuapp.com/api/v1/posts/', {
       method: 'GET',
     }
     ).then(response => response.json())
@@ -20,7 +20,7 @@ class Posts extends React.Component {
     event.preventDefault();
     const data = new FormData(event.target);
     console.log(event);
-    fetch('http://localhost:3000/api/v1/posts/', {
+    fetch('http://https://hidden-ocean-16005.herokuapp.com/api/v1/posts/', {
       method: 'DELETE',
       body: data,
     }
