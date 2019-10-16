@@ -10,7 +10,7 @@ class Posts extends React.Component {
   componentDidMount() {
     const url = 'http://localhost:2000/api/v1/posts';
   
-    if(process.env.ACEBOOK_ENV === 'production'){
+    if(process.env.NODE_ENV === 'production'){
       url = 'https://hidden-ocean-16005.herokuapp.com/api/v1/posts'
     }
     fetch(url, {
