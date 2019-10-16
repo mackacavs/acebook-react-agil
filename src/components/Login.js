@@ -25,10 +25,11 @@ class Login extends React.Component {
   }
 
   handleSubmit(event) {
-    event.preventDefault();
+    event.preventDefault()
+    debugger;
     const data = new FormData(event.target);
     const url = 'http://localhost:2000/api/v1/users';
-
+    const test = process.env.NODE_ENV;
     if(process.env.NODE_ENV === 'production'){
       url = 'https://hidden-ocean-16005.herokuapp.com/api/v1/users'
     }
