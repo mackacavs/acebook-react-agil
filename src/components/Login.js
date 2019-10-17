@@ -29,9 +29,9 @@ class Login extends React.Component {
     debugger;
     const data = new FormData(event.target);
     const url = 'http://localhost:2000/api/v1/users';
-    const test = process.env.NODE_ENV;
-    if(process.env.NODE_ENV === 'production'){
-      url = 'https://hidden-ocean-16005.herokuapp.com/api/v1/users'
+    const test = process.env.REACT_APP_ACE;
+    if(process.env.REACT_APP_ACE === 'production'){
+      url = 'https://hidden-ocean-16005.herokuapp.com/api/v1/users';
     }
     fetch(url, {
       method: 'POST',
