@@ -45,7 +45,6 @@ export class Provider extends Component {
   state = {
     posts: [
     ],
-
     //Methods
 
     dispatch: action => this.setState(state => reducer(state, action))
