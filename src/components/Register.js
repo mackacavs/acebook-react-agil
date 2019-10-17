@@ -19,13 +19,14 @@ class Register extends React.Component {
 
   renderRedirect = () => {
     if (this.state.redirect) {
-      return <Redirect to='/home' />
+      return <Redirect to='/posts' />
     }
   }
 
   handleSubmit(event) {
     event.preventDefault();
-    const data = new FormData(event.target)
+    const data = new FormData(event.target);
+
     var url = 'http://localhost:2000/api/v1/users/new';
   
     if(process.env.REACT_APP_ACE === 'production'){
