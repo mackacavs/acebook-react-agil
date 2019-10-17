@@ -8,7 +8,7 @@ class Posts extends React.Component {
   }
 
   componentDidMount() {
-    const url = 'http://localhost:2000/api/v1/posts';
+    var url = 'http://localhost:2000/api/v1/posts';
   
     if(process.env.REACT_APP_ACE === 'production'){
       url = 'https://hidden-ocean-16005.herokuapp.com/api/v1/posts'
@@ -24,7 +24,7 @@ class Posts extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     const data = new FormData(event.target);
-    const url = 'http://localhost:2000/api/v1/posts';
+    var url = 'http://localhost:2000/api/v1/posts';
   
     if(process.env.ACEBOOK_ENV === 'production'){
       url = 'https://hidden-ocean-16005.herokuapp.com/api/v1/posts'

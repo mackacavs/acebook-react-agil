@@ -26,7 +26,7 @@ class Register extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     const data = new FormData(event.target)
-    const url = 'http://localhost:2000/api/v1/users/new';
+    var url = 'http://localhost:2000/api/v1/users/new';
   
     if(process.env.REACT_APP_ACE === 'production'){
       url = 'https://hidden-ocean-16005.herokuapp.com/api/v1/users/new'
