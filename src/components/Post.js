@@ -11,8 +11,8 @@ class Post extends Component {
 
     e.preventDefault()
     var url = `http://localhost:2000/api/v1/posts/${id}`;
-  
-    if(process.env.REACT_APP_ACE === 'production'){
+
+    if (process.env.REACT_APP_ACE === 'production') {
       url = `https://hidden-ocean-16005.herokuapp.com/api/v1/posts/${id}`
     }
     fetch(url, {
@@ -32,24 +32,24 @@ class Post extends Component {
     }
 
     var url = 'http://localhost:2000/api/v1/posts/';
-  
-    if(process.env.REACT_APP_ACE === 'production'){
+
+    if (process.env.REACT_APP_ACE === 'production') {
       url = 'https://hidden-ocean-16005.herokuapp.com/api/v1/posts/'
     }
     fetch(url, {
       method: 'PUT',
       body: JSON.stringify({
         id: id,
-        message: this.state.message}),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      
+        message: this.state.message
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+
     }).then(response => response.json())
 
-    dispatch({ type: "DELETE_CONTACT", payload: newPost.id});
-    dispatch({ type: "ADD_CONTACT", payload: newPost});
-    this.setState({ message: ''})
+    dispatch({ type: "UPDATE_POST", payload: newPost });
+    this.setState({ message: '' })
 
   };
 
@@ -81,9 +81,9 @@ class Post extends Component {
                   onChange={this.onChange}
                 />
                 <i value={id} className="fas fa-save"
-                style={{ float: 'right', color: 'red' }}
-                onClick={this.onUpdateClick.bind(this, id, dispatch)}
-              />
+                  style={{ float: 'right', color: 'red' }}
+                  onClick={this.onUpdateClick.bind(this, id, dispatch)}
+                />
               </h6>
             </div>
           )

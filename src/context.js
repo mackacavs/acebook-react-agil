@@ -4,19 +4,24 @@ const Context = React.createContext();
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'DELETE_CONTACT':
+    case 'DELETE_POST':
       return {
         ...state,
         posts: state.posts.filter(post =>
           post.id !== action.payload)
       }
-    case 'ADD_CONTACT':
-      console.log(state)
-
+    case 'ADD_POST':
       return {
         ...state,
         posts: [action.payload,
         ...state.posts]
+      }
+    case 'UPDATE_POST':
+      return {
+        ...state,
+        posts: state.posts.map(post =>
+          post.id === action.payload.id ? (post = action.payload) : post
+        )
       }
     default:
       return state;
@@ -27,8 +32,8 @@ export class Provider extends Component {
 
   componentDidMount() {
     var url = 'http://localhost:2000/api/v1/posts/';
-  
-    if(process.env.REACT_APP_ACE === 'production'){
+
+    if (process.env.REACT_APP_ACE === 'production') {
       url = 'https://hidden-ocean-16005.herokuapp.com/api/v1/posts/'
     }
 
