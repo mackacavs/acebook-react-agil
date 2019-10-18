@@ -19,7 +19,7 @@ class Post extends Component {
       method: 'DELETE'
     }).then(response => response.json())
 
-    dispatch({ type: "DELETE_CONTACT", payload: id });
+    dispatch({ type: "DELETE_POST", payload: id });
   };
 
   onUpdateClick = (id, dispatch, e) => {

@@ -35,7 +35,7 @@ class AddPost extends Component {
     ).then(response => response.json()
     ).then(data => {
       newPost.id = data.id
-      dispatch({ type: 'ADD_CONTACT', payload: newPost })
+      dispatch({ type: 'ADD_POST', payload: newPost })
     })
 
     this.setState({ message: '', errors: {} })
