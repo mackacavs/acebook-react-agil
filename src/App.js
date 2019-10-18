@@ -8,11 +8,13 @@ import Posts from './components/Posts';
 import Logout from './components/Logout';
 import Header from './components/layout/Header'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Provider } from './context';
 
 class App extends React.Component {
   render() {
 
     return (
+      <Provider>
       <div className="App">
         <Router>
           <Header />
@@ -26,6 +28,7 @@ class App extends React.Component {
           <Logout />
         </Router>
       </div>
+      </Provider>
     )
   };
 }
