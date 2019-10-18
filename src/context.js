@@ -42,6 +42,8 @@ export class Provider extends Component {
     }
     ).then(response => response.json()
     ).then(data => {
+      console.log("-------")
+      console.log(data)
       this.setState({ posts: data })
     })
   }

@@ -22,11 +22,12 @@ class Post extends Component {
     dispatch({ type: "DELETE_POST", payload: id });
   };
 
-  onUpdateClick = (id, dispatch, e) => {
+  onUpdateClick = (id, created_at, dispatch, e) => {
     console.log(this.state.message)
     e.preventDefault()
 
     const newPost = {
+      created_at: created_at,
       id: id,
       message: this.state.message
     }
@@ -58,7 +59,7 @@ class Post extends Component {
   })
 
   render() {
-    const { id, message } = this.props
+    const { dateCreated, id, message } = this.props
     return (
 
       <Consumer>
@@ -66,7 +67,7 @@ class Post extends Component {
           const { dispatch } = value
           return (
             <div className="card card-body mb-3">
-              <h6>{message} <i value={id} className="fas fa-times"
+              <h6>{dateCreated.substring(0,10)}, {dateCreated.substring(11,16)} - {message} <i value={id} className="fas fa-times"
                 style={{ float: 'right', color: 'red' }}
                 onClick={this.onDeleteClick.bind(this, id, dispatch)}
               /></h6>
@@ -82,7 +83,7 @@ class Post extends Component {
                 />
                 <i value={id} className="fas fa-save"
                   style={{ float: 'right', color: 'red' }}
-                  onClick={this.onUpdateClick.bind(this, id, dispatch)}
+                  onClick={this.onUpdateClick.bind(this, id, dateCreated, dispatch)}
                 />
               </h6>
             </div>

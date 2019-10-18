@@ -11,7 +11,7 @@ class Posts extends Component {
         {value => {
           return (
             <div>{value.posts.map(post =>
-              <Post message={post.message} id={post.id} key={post.id} />
+              <Post dateCreated={post.created_at} message={post.message} id={post.id} key={post.id} />
             )}
             <AddPost />
             </div>

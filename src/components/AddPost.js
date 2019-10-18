@@ -17,6 +17,7 @@ class AddPost extends Component {
     }
 
     const newPost = {
+      created_at: null,
       id: null,
       message: this.state.message
     }
@@ -35,6 +36,7 @@ class AddPost extends Component {
     ).then(response => response.json()
     ).then(data => {
       newPost.id = data.id
+      newPost.created_at = data.created_at
       dispatch({ type: 'ADD_POST', payload: newPost })
     })
 
