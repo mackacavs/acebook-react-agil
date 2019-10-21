@@ -1,4 +1,15 @@
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Running this Project ##
+
+This is the React front end, which calls the Rails back end which can be found here : https://github.com/mackacavs/acebook-agil/
+
+This can be started as described below, and needs to start on the default port of 3000.
+
+You can also see this React front end on Heroku at the following link : https://secret-lake-91806.herokuapp.com
+
 
 ## Available Scripts
 
