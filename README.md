@@ -1,79 +1,77 @@
+Acebook-react-agil
+
+# Acebook-react-agil
+
+As part of our challenge to build an acebook clone - our product owner gave us the task of exposing the [back-end via an api](www.bbc.co.uk).  
 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```
+As a user
+I want to signup to AceBook
+So I can login and use the app  
+
+As a user
+I want to login to AceBook
+So that I can access my posts
+
+As a user
+I want to enter my email and password on the signup page
+So that I can create a user account
+
+As a user
+I want a helpful message if I enter incorrect login details
+So that I can see what I have done wrong
+
+As a user
+I want to be redirected to the posts page after login
+So that I can see my posts
+
+As a user
+I want to be redirected to the login page if I am not logged in
+So that I can sign in and see my posts
+
+As a user
+I want to view post in desc date order
+So that I can see newest posts first
+
+As a user
+I want to view the date a post was created
+So that I can see how old it is
+
+As a user
+I only want to view my posts
+So that I can see how many posts i have done
+
+```
+
+# AceBook
+
+*** HEROKU admin instructions ***
+
+To install Heroku, use brew : brew tap heroku/brew && brew install heroku
+
+Log in by typing 'heroku login -i' on terminal.
+
 
 ## Running this Project ##
 
-This is the React front end, which calls the Rails back end which can be found here : https://github.com/mackacavs/acebook-agil/
+This project has been split into two parts
 
-This can be started as described below, and needs to start on the default port of 3000.
+1) A Rails front end and back end which can be run from this project using the quickstart instructions below.  Please note we are starting the server on port 2000 because the React app runs on port 3000.  You can also see this app from Heroku with the following link : https://hidden-ocean-16005.herokuapp.com
 
-You can also see this React front end on Heroku at the following link : https://secret-lake-91806.herokuapp.com
+2) A completely seperate React front end, which can be found in this repository : https://github.com/irafaelasilva/acebook-react-agil
 
+## Quickstart
 
-## Available Scripts
+First, clone this repository. Then:
 
-In the project directory, you can run:
+```bash
+> bundle install
+> bin/rails db:drop # Only needed if the database has changed since the app was last installed
+> bin/rails db:create
+> bin/rails db:migrate
 
-### `npm start`
+> bundle exec rspec # Run the tests to ensure it works
+> bin/rails server -p 2000 # Start the server at localhost:2000
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```
