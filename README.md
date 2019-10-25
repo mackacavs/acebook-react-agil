@@ -2,7 +2,7 @@ Acebook-react-agil
 
 # Acebook-react-agil
 
-As part of our challenge to build an acebook clone - our product owner gave us the task of exposing the [back-end via an api](https://www.bbc.co.uk).  
+As part of our challenge to build an acebook clone - our product owner gave us the task of exposing the [back-end via an api](https://github.com/mackacavs/acebook-agil/tree/master/app/controllers/api).  
 
 
 ```
