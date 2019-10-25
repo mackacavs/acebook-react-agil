@@ -2,6 +2,39 @@
 
 As part of our challenge to build an acebook clone - our product owner gave us the task of exposing the [back-end via an api](https://github.com/mackacavs/acebook-agil/tree/master/app/controllers/api). Further to this, we had to create a new front-end that could interact with our back-end. As a team, we took this as an opportunity to build our front-end with React and call our restful API in order to access our data.
 
+## Process
+
+As it was our first time using React - our first aim was to build a thin slice through the application that allowed us to achieve the following-
+
+* Access our activeRecord database using Restful API calls
+* Display part of the data retrieved in React using React components, more specifically the 'render' method.
+
+We used the following API call in our posts.js component-
+
+```  
+componentDidMount() {
+    var url = 'http://localhost:2000/api/v1/posts/';
+
+    fetch(url, {
+      method: 'GET',
+    }
+    ).then(response => response.json()
+    ).then(data => {
+      document.getElementById('testElement').innerHTML = data[0].email
+    })
+  }
+```
+From there, we displayed our data in the render method-
+
+```  
+  render() {
+          return (
+            <div>
+            <p id="testElement"></p>
+            </div>
+          )
+  }
+```
 
 ```
 As a user
