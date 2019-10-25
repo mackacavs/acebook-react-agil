@@ -27,14 +27,24 @@ componentDidMount() {
 From there, we displayed our data in the render method-
 
 ```  
-  render() {
-          return (
-            <div>
+render() {
+        return (
+          <div>
             <p id="testElement"></p>
-            </div>
-          )
-  }
+          </div>
+        )
+      }
 ```
+
+Once this thin slice had been established, we built our front-end with the same functionality that we'd already added to our [previous application](https://github.com/mackacavs/acebook-agil)-
+
+* Users can register
+* Users can post messages
+* Users can edit messages
+* Users can login
+* Users can logout
+
+We build our application 
 
 ```
 As a user
