@@ -36,7 +36,7 @@ render() {
       }
 ```
 
-Once this thin slice had been established, we built our front-end with the same functionality that we'd already added to our [previous application](https://github.com/mackacavs/acebook-agil)-
+Once this thin slice had been established, we built our front-end with the same functionality that we'd already added to our [previous application](https://github.com/mackacavs/acebook-agil) built in Ruby on Rails-
 
 * Users can register
 * Users can post messages
@@ -44,7 +44,12 @@ Once this thin slice had been established, we built our front-end with the same 
 * Users can login
 * Users can logout
 
-We build our application 
+When we first built our application in React, in order to re-create our functionality as quickly as possible we put all our logic in the same Posts.js file. This gave a couple problems-
+
+* Lack of readability
+* An inability to scale
+
+The biggest issue though was the fact that our state was only accessible through the Posts.js file, meaning we couldn't create other components in react without sending information through our props to access the state in the Posts.js file. In order to remedy this, we refactored our application using the context API. 
 
 ```
 As a user
@@ -100,7 +105,7 @@ This project has been split into two parts
 
 1) A Rails front end and back end which can be run from this project using the quickstart instructions below.  Please note we are starting the server on port 2000 because the React app runs on port 3000.  You can also see this app from Heroku with the following link : https://hidden-ocean-16005.herokuapp.com
 
-2) A completely seperate React front end, which can be found in this repository : https://github.com/irafaelasilva/acebook-react-agil
+2) A completely seperate React front end, which can be found in this repository loaded here : https://secret-lake-91806.herokuapp.com
 
 ## Quickstart
 
