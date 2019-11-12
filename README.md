@@ -85,12 +85,42 @@ When we first built our application in React, in order to re-create our function
 * Lack of readability
 * An inability to scale
 
-The biggest issue though was the fact that our state was only accessible through the Posts.js file, meaning we couldn't create other components in react without sending information through our props to access the state in the Posts.js file. In order to remedy this, we refactored our application using the context API. 
+The biggest issue though was the fact that our state was only accessible through the Posts.js file, meaning we couldn't create other components in react without sending information through our props to access the state in the Posts.js file. In order to remedy this, we refactored our application using the [context API](https://github.com/mackacavs/acebook-react-agil/blob/master/src/context.js).
 
-## Running this Project ##
+### Screenshots
+
+<img src="images/app.png?" width="400px">
+
+The main app component
+
+<img src="images/possComponent.png?" width="400px">
+
+Our posts component - hopefully you can see how "skinny" we've made it
+
+<img src="images/postComponent.png?" width="400px">
+
+The post component - that also has a delete button connected to it
+
+Technologies Used
+-----
+
+* React
+  * We used React to build the application in our front-end
+* Context API
+  * Although not a technology as such, the context API was a crucial feature in helping us a build a scalable application
+* Heroku
+  * Heroku was used to deploy the application. Please see below for links to sites
+* CircleCI
+  * Our Continuous Integration was tested through CircleCI
+
+Installation
+-----
+
+* Git clone the project into your own local repository
+* Run bundle install in order to download the relevant gems
 
 This project has been split into two parts
 
-1) A Rails front end and back end which can be run from this project using the quickstart instructions below.  Please note we are starting the server on port 2000 because the React app runs on port 3000.  You can also see this app from Heroku with the following link : https://hidden-ocean-16005.herokuapp.com
+1) A Rails front end and back end which can be run from this project using the instructions in this(link) ReadMe.  You can also see this app from Heroku with the following link: https://hidden-ocean-16005.herokuapp.com
 
-2) A completely seperate React front end, which can be found in this repository loaded here : https://secret-lake-91806.herokuapp.com
+2) A completely seperate React front end, which can be found in this repository loaded here: https://secret-lake-91806.herokuapp.com
