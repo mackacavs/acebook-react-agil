@@ -93,7 +93,7 @@ The biggest issue though was the fact that our state was only accessible through
 
 The main app component
 
-<img src="images/possComponent.png?" width="400px">
+<img src="images/postsComponent.png?" width="400px">
 
 Our posts component - hopefully you can see how "skinny" we've made it
 
