@@ -1,9 +1,10 @@
-# Acebook-react-agil
+Acebook
+==================
 
-Testing
 As part of our challenge to build an acebook clone - our product owner gave us the task of exposing the [back-end via an api](https://github.com/mackacavs/acebook-agil/tree/master/app/controllers/api). Further to this, we had to create a new front-end that could interact with our back-end. As a team, we took this as an opportunity to build our front-end with React and call our restful API in order to access our data.
 
-## Process
+Process
+-----
 
 As it was our first time using React - our first aim was to build a thin slice through the application that allowed us to achieve the following-
 
@@ -39,11 +40,45 @@ render() {
 
 Once this thin slice had been established, we built our front-end with the same functionality that we'd already added to our [previous application](https://github.com/mackacavs/acebook-agil) built in Ruby on Rails-
 
-* Users can register
-* Users can post messages
-* Users can edit messages
-* Users can login
-* Users can logout
+
+```
+As a user
+I want to signup to AceBook
+So I can login and use the app  
+
+As a user
+I want to login to AceBook
+So that I can access my posts
+
+As a user
+I want to enter my email and password on the signup page
+So that I can create a user account
+
+As a user
+I want a helpful message if I enter incorrect login details
+So that I can see what I have done wrong
+
+As a user
+I want to be redirected to the posts page after login
+So that I can see my posts
+
+As a user
+I want to be redirected to the login page if I am not logged in
+So that I can sign in and see my posts
+
+As a user
+I want to view post in desc date order
+So that I can see newest posts first
+
+As a user
+I want to view the date a post was created
+So that I can see how old it is
+
+As a user
+I only want to view my posts
+So that I can see how many posts i have done
+
+```
 
 When we first built our application in React, in order to re-create our functionality as quickly as possible we put all our logic in the same Posts.js file. This gave us a couple of problems-
 
@@ -51,7 +86,6 @@ When we first built our application in React, in order to re-create our function
 * An inability to scale
 
 The biggest issue though was the fact that our state was only accessible through the Posts.js file, meaning we couldn't create other components in react without sending information through our props to access the state in the Posts.js file. In order to remedy this, we refactored our application using the context API. 
-
 
 ## Running this Project ##
 
